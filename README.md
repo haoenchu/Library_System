@@ -1,6 +1,8 @@
 # 📚 智慧圖書管理系統
 > Windows Programming (II) 期末專題  
 > 以 C# WinForms 打造的輕量化智慧圖書館管理系統
+<img width="370" height="252" alt="螢幕擷取畫面 2026-06-20 230256" src="https://github.com/user-attachments/assets/b3b10f9f-02a1-46e5-bbf0-bf939338cb4e" />
+<img width="500" height="300" alt="螢幕擷取畫面 2026-06-20 230314" src="https://github.com/user-attachments/assets/0027a517-87e6-4d4e-9b14-bdd4695a4f75" />
 
 ---
 
