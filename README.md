@@ -152,3 +152,5 @@ admin,1234
 - LINQ 教學：https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/linq
 - CSV 讀寫參考：https://docs.microsoft.com/dotnet/api/system.io.streamreader
 - Windows Media Player SDK：https://docs.microsoft.com/windows/win32/wmp/windows-media-player-sdk
+
+**註:書本名稱皆為虛構，只是為了方便展示功能
