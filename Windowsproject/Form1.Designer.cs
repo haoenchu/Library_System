@@ -32,14 +32,14 @@
             this.btnPopular = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.pnlToolbar = new System.Windows.Forms.Panel();
+            this.btnQuit = new System.Windows.Forms.Button();
+            this.lbborrow_hmb = new System.Windows.Forms.Label();
+            this.lbuserinfo = new System.Windows.Forms.Label();
             this.btnFilterCategory = new System.Windows.Forms.Button();
             this.lvBooks = new System.Windows.Forms.ListView();
             this.pnlDetail = new System.Windows.Forms.Panel();
             this.wmp = new AxWMPLib.AxWindowsMediaPlayer();
             this.pnlBorrowList = new System.Windows.Forms.Panel();
-            this.lbuserinfo = new System.Windows.Forms.Label();
-            this.lbborrow_hmb = new System.Windows.Forms.Label();
-            this.btnQuit = new System.Windows.Forms.Button();
             this.pnlToolbar.SuspendLayout();
             this.pnlDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wmp)).BeginInit();
@@ -83,6 +83,36 @@
             this.pnlToolbar.Name = "pnlToolbar";
             this.pnlToolbar.Size = new System.Drawing.Size(1338, 67);
             this.pnlToolbar.TabIndex = 3;
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.BackColor = System.Drawing.Color.Linen;
+            this.btnQuit.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnQuit.Location = new System.Drawing.Point(887, 12);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(91, 44);
+            this.btnQuit.TabIndex = 9;
+            this.btnQuit.Text = "登出";
+            this.btnQuit.UseVisualStyleBackColor = false;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // lbborrow_hmb
+            // 
+            this.lbborrow_hmb.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbborrow_hmb.Location = new System.Drawing.Point(496, 25);
+            this.lbborrow_hmb.Name = "lbborrow_hmb";
+            this.lbborrow_hmb.Size = new System.Drawing.Size(385, 25);
+            this.lbborrow_hmb.TabIndex = 8;
+            this.lbborrow_hmb.Text = "how many books is borrowed";
+            // 
+            // lbuserinfo
+            // 
+            this.lbuserinfo.Font = new System.Drawing.Font("新細明體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbuserinfo.Location = new System.Drawing.Point(243, 20);
+            this.lbuserinfo.Name = "lbuserinfo";
+            this.lbuserinfo.Size = new System.Drawing.Size(235, 33);
+            this.lbuserinfo.TabIndex = 7;
+            this.lbuserinfo.Text = "歡迎，名字";
             // 
             // btnFilterCategory
             // 
@@ -138,36 +168,6 @@
             this.pnlBorrowList.Size = new System.Drawing.Size(224, 666);
             this.pnlBorrowList.TabIndex = 5;
             // 
-            // lbuserinfo
-            // 
-            this.lbuserinfo.Font = new System.Drawing.Font("新細明體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbuserinfo.Location = new System.Drawing.Point(243, 20);
-            this.lbuserinfo.Name = "lbuserinfo";
-            this.lbuserinfo.Size = new System.Drawing.Size(235, 33);
-            this.lbuserinfo.TabIndex = 7;
-            this.lbuserinfo.Text = "歡迎，名字";
-            // 
-            // lbborrow_hmb
-            // 
-            this.lbborrow_hmb.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbborrow_hmb.Location = new System.Drawing.Point(496, 25);
-            this.lbborrow_hmb.Name = "lbborrow_hmb";
-            this.lbborrow_hmb.Size = new System.Drawing.Size(385, 25);
-            this.lbborrow_hmb.TabIndex = 8;
-            this.lbborrow_hmb.Text = "how many books is borrowed";
-            // 
-            // btnQuit
-            // 
-            this.btnQuit.BackColor = System.Drawing.Color.Linen;
-            this.btnQuit.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnQuit.Location = new System.Drawing.Point(887, 12);
-            this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(91, 44);
-            this.btnQuit.TabIndex = 9;
-            this.btnQuit.Text = "登出";
-            this.btnQuit.UseVisualStyleBackColor = false;
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -178,7 +178,7 @@
             this.Controls.Add(this.lvBooks);
             this.Controls.Add(this.pnlToolbar);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "圖書管理系統";
             this.pnlToolbar.ResumeLayout(false);
             this.pnlDetail.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.wmp)).EndInit();
