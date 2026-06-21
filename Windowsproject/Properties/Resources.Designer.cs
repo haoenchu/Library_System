@@ -61,16 +61,12 @@ namespace Windowsproject.Properties {
         }
         
         /// <summary>
-        ///   查詢類似 Username,Password,,,,,,,,CoverImagePath
-        ///Daniel,1234,,,,,,,,
-        ///,,,,,,,,,
-        ///,,,,,,,,,
-        ///,,,,,,,,,
-        ///,,,,,,,,,
-        ///,,,,,,,,,
-        ///,,,,,,,,,
-        ///,,,,,,,,,
-        /// 的當地語系化字串。
+        ///   查詢類似 BookId,Title,Author,Category,Status,Borrower,DueDate,Rating,AddedDate,Description,RatingCount,RatingSum
+        ///B0001,解憂柑仔店,藤野圭吾,文學小說,在館中,,,3,2026-06-01,一間神奇的雜貨店，煩惱投進信箱便能得到回覆。三個少年的奇遇，串起了跨越時空的人情與救贖。,1,3
+        ///B0002,從零學C尖,王小銘,資訊科技,在館中,,,4,2026-06-10,從零開始學習 C# 程式語言，涵蓋基礎語法、物件導向概念，到實際應用開發，適合完全沒有程式基礎的初學者。,3,11
+        ///B0003,有錢爸爸沒錢爸爸,羅伯・清崎,商業理財,在館中,,,4,2026-05-20,用兩位父親的理財觀念對比，教導讀者如何建立財務自由的思維，讓錢為你工作而不是你為錢工作。,3,11
+        ///B0004,少即是設計,原硏哉,藝術設計,在館中,,,4,2026-06-15,日本設計大師探討空的美學，以極簡主義重新定義設計的本質，是平面與產品設計的經典之作。,2,7
+        ///B0005,春樹物語選集,村上晴樹,文學小說,在館中,,,4,20 [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
         /// </summary>
         internal static string Books {
             get {
@@ -79,15 +75,14 @@ namespace Windowsproject.Properties {
         }
         
         /// <summary>
-        ///   查詢類似 Username,Password,,,,,,,,CoverImagePath
-        ///Daniel,1234,,,,,,,,
-        ///,,,,,,,,,
-        ///,,,,,,,,,
-        ///,,,,,,,,,
-        ///,,,,,,,,,
-        ///,,,,,,,,,
-        ///,,,,,,,,,	
-        ///,,,,,,,,,
+        ///   查詢類似 Username,Password
+        ///Daniel,111
+        ///HHHH,5555
+        ///123,123
+        ///ABC,999
+        ///HHHHHHHH,123456
+        ///GAAAAA,123456
+        ///HHHHHHH,CCC
         /// 的當地語系化字串。
         /// </summary>
         internal static string users {

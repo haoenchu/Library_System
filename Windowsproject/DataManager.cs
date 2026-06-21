@@ -17,7 +17,7 @@ namespace Windowsproject
             string appDir = Application.StartupPath;
             _csvPath = Path.Combine(appDir, "Resources\\Books.csv");
             _imagesDir = Path.Combine(appDir, "covers");
-
+            
 
 
             if (!Directory.Exists(_imagesDir))

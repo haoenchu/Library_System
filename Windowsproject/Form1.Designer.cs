@@ -128,6 +128,9 @@
             // 
             // lvBooks
             // 
+            this.lvBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvBooks.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lvBooks.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lvBooks.HideSelection = false;
