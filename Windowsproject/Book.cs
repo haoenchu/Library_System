@@ -16,6 +16,10 @@ namespace Windowsproject
 
         public string Description { get; set; } = "";
 
+        public int RatingCount { get; set; } = 0;   // 累積評分人數
+
+        public int RatingSum { get; set; } = 0;   // 累積總分
+
         public Book()
         {
             Status = "在館中";
@@ -41,7 +45,9 @@ namespace Windowsproject
                 Escape(due),
                 Rating.ToString(),
                 AddedDate.ToString("yyyy-MM-dd"),
-                Escape(Description)
+                Escape(Description),
+                RatingCount.ToString(),
+                RatingSum.ToString()
             );
         }
 
@@ -49,7 +55,7 @@ namespace Windowsproject
         public static Book FromCsvLine(string line)
         {
             var f = ParseCsv(line);
-            if (f.Length < 9) return null;
+            if (f.Length < 10) return null;
 
             return new Book
             {
@@ -65,7 +71,9 @@ namespace Windowsproject
                 Rating = int.TryParse(f[7], out int r) ? r : 3,
                 AddedDate = DateTime.TryParse(f[8], out DateTime d)
                                   ? d : DateTime.Today,
-                Description = f.Length > 9 ? f[9] : ""
+                Description = f.Length > 9 ? f[9] : "",
+                RatingCount = f.Length > 10 && int.TryParse(f[10], out int rc) ? rc : 0,  // ← 新增
+                RatingSum = f.Length > 11 && int.TryParse(f[11], out int rs) ? rs : 0,
             };
         }
 

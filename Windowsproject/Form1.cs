@@ -580,8 +580,9 @@ namespace Windowsproject
             lblTitle.Text = $"■ 書名：{book.Title}";
             lblAuthor.Text = $"■ 作者：{book.Author}";
             lblDesc.Text = string.IsNullOrEmpty(book.Description) ? "（暫無簡介）" : book.Description;
-            lblRating.Text = new string('★', book.Rating)
-                              + new string('☆', 5 - book.Rating);
+            string avgText = book.RatingCount > 0   ? $"  {(double)book.RatingSum / book.RatingCount:F1}": $"  {book.Rating}.0";
+
+            lblRating.Text = new string('★', book.Rating)+ new string('☆', 5 - book.Rating)+ avgText;
             lblCategory.Text = $"■ 分類：{book.Category}";
             lblAdded.Text = $"■ 上架時間：{book.AddedDate:yyyy-MM-dd}";
 
@@ -781,11 +782,18 @@ namespace Windowsproject
 
             if (dlg.ShowDialog(this) == DialogResult.OK)
             {
-                _selectedBook.Rating = cmb.SelectedIndex + 1;
-                DataManager.SaveBooks(_books);
-                UpdateDetailPanel(_selectedBook);   // 右側星星即時更新
+                int newScore = cmb.SelectedIndex + 1;
+                _selectedBook.RatingSum += newScore;
+                _selectedBook.RatingCount += 1;
 
-                MessageBox.Show($"評分已更新為 {_selectedBook.Rating} 星！",
+                double avg = (double)_selectedBook.RatingSum / _selectedBook.RatingCount;
+                _selectedBook.Rating = Math.Max(1, Math.Min(5, (int)Math.Round(avg)));
+
+                DataManager.SaveBooks(_books);
+                UpdateDetailPanel(_selectedBook);
+
+                MessageBox.Show(
+                    $"評分成功！\n您的評分：{newScore} 星\n目前平均：{avg:F1} 星（共 {_selectedBook.RatingCount} 人評分）",
                     "評分完成", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -845,9 +853,11 @@ namespace Windowsproject
 
             if (_activeFilterBtn != btnPopular) return; // 已取消就直接返回
 
-            var top5 = _books.OrderByDescending(b => b.Rating)
-                             .Take(5)
-                             .ToList();
+            var top5 = _books.OrderByDescending(b => b.RatingCount > 0
+                     ? (double)b.RatingSum / b.RatingCount
+                     : b.Rating)
+                 .Take(5)
+                 .ToList();
 
             lvBooks.Items.Clear();
             imgList.Images.Clear();

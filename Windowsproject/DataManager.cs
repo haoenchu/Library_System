@@ -56,7 +56,7 @@ namespace Windowsproject
             {
                 // 標題列
                 sw.WriteLine("BookId,Title,Author,Category,Status," +
-             "Borrower,DueDate,Rating,AddedDate,Description");
+             "Borrower,DueDate,Rating,AddedDate,Description,RatingCount,RatingSum");
 
                 foreach (var b in books)
                     sw.WriteLine(b.ToCsvLine());
